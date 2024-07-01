@@ -1,70 +1,92 @@
-# Getting Started with Create React App
+# AI-Powered Content Summarizer Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a React-based dashboard that allows users to input long-form text content or scrape content from web pages and receive AI-generated summaries. The application includes features like user authentication, summarization history, and options for exporting summaries.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+1. **Text Input Area**: Users can paste or type long-form content.
+2. **URL Input Field**: Users can input a URL to scrape content.
+3. **Web Scraping**: Fetch HTML content from a URL and extract the main text content.
+4. **AI Summarization**: Generate summaries using a mock AI API.
+5. **Result Display**: Display the original text and AI-generated summary side by side.
+6. **Summary Length Options**: Choose between short, medium, or long summaries.
+7. **User Authentication**: Simple authentication to personalize the experience.
+8. **Export Summaries**: Export summaries in different formats (e.g., plain text, PDF).
+9. **Loading State**: Indicate loading while waiting for summarization or scraping.
+10. **Summarization History**: Save and display previous summarization requests.
+11. **Accessibility Features**: Ensure usability for people with disabilities.
+12. **Content Cleaning**: Remove unnecessary HTML elements from scraped content.
+13. **Preview and Edit Scraped Content**: Allow users to preview and edit scraped content before summarization.
+14. **Error Handling**: Handle errors for API failures, invalid inputs, and web scraping issues.
 
-### `npm start`
+## Project Structure
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+├── public
+│ └── index.html
+├── src
+│ ├── components
+│ │ ├── Auth.js
+│ │ ├── Error.js
+│ │ ├── History.js
+│ │ ├── Loading.js
+│ │ ├── SummaryDisplay.js
+│ │ ├── TextInput.js
+│ │ └── UrlInput.js
+│ ├── styles
+│ │ └── styles.css
+│ ├── utils
+│ │ └── mockSummarize.js
+│ ├── App.js
+│ ├── index.js
+│ └── index.css
+├── .gitignore
+├── package.json
+└── README.md
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## Getting Started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Prerequisites
 
-### `npm run build`
+- Node.js
+- npm (Node Package Manager)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone the repository:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+git clone https://github.com/Pratham9798/ai-content-summarizer-dashboard.git
+cd ai-content-summarizer-dashboard
 
-### `npm run eject`
+npm install
+npm start
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Open your browser and go to http://localhost:3000.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Usage
+Login: Use the username user and password password to log in.
+Text Input: Paste or type long-form content in the text input area.
+URL Input: Enter a URL and click the "Scrape" button to fetch and display content.
+Generate Summary: Select the summary length and click the "Summarize" button.
+View Results: The original text and the AI-generated summary are displayed side by side.
+Export: Export summaries using the available export options.
+History: View the history of previous summarization requests.
+File Descriptions
+src/components/Auth.js: Handles user authentication.
+src/components/Error.js: Displays error messages.
+src/components/History.js: Shows summarization history.
+src/components/Loading.js: Displays loading state.
+src/components/SummaryDisplay.js: Displays original text and summary.
+src/components/TextInput.js: Handles text input.
+src/components/UrlInput.js: Handles URL input and scraping.
+src/styles/styles.css: Contains the CSS styles.
+src/utils/mockSummarize.js: Mock AI summarization function.
+src/App.js: Main application component.
+src/index.js: Entry point for the React application.
+public/index.html: HTML template.
+Contributing
+Feel free to submit issues, fork the repository, and send pull requests.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
